@@ -28,12 +28,12 @@ export default function App() {
   }, [query]);
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>Book Finder</h1>
+    <div className="card-container">
+      <h1>Open Library Search</h1>
       <BookSearchForm onSearch={setQuery} />
       
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+      {loading && <p className="status-text">Loading...</p>}
+      {error && <p className="status-text">Error: {error}</p>}
       {!loading && !error && <BookList books={books} />}
     </div>
   );

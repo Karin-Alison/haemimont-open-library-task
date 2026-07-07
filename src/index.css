@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #002d62; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.card-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px; 
+  box-shadow: 0 10px 30px rgba(3, 0, 0, 0.25); 
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1 {
+  color: #002d62;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+input {
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus {
+  border-color: #002d62; 
+}
+button {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #002d62;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #001228;
+}
+.status-text {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  color: red;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+li {
+  background: #f4f7fa;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 4px solid #002d62;
+  text-align: left;
+  font-size: 0.95rem;
+}
