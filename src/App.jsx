@@ -3,16 +3,20 @@ import BookSearchForm from './components/BookSearchForm';
 import BookList from './components/BookList';
 
 export default function App() {
-  const [query, setQuery] = useState('the hobbit');
+  let [query, setQuery] = useState('the hobbit');
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  if (query.trim() === '') {
+    setQuery('the hobbit');
+  }
 
   useEffect(() => {
     setLoading(true);
     setError(null);
 
-    fetch(`https://openlibrary.org/search.json?title=${query}`)
+    fetch(`https://openlibrary.org/search.json?title=${query ? query : 'the hobbit'}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch data');
         return res.json();
